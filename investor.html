@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InvestLink | Investor Dashboard</title>
+
+    <link rel="stylesheet" href="investor.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-mark">I</span>
+            Invest<span>Link</span>
+        </a>
+
+        <div class="sidebar-title">
+            INVESTOR
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="#dashboard" class="nav-item active">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="#discover" class="nav-item">
+                <span>⌕</span>
+                Discover
+            </a>
+
+            <a href="#portfolio" class="nav-item">
+                <span>◈</span>
+                Portfolio
+            </a>
+
+            <a href="#saved" class="nav-item">
+                <span>♡</span>
+                Saved
+            </a>
+
+            <a href="#requests" class="nav-item">
+                <span>✉</span>
+                Requests
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-title">
+            ACCOUNT
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="#profile" class="nav-item">
+                <span>●</span>
+                My Profile
+            </a>
+
+            <a href="#" class="nav-item" onclick="openSettings(event)">
+                <span>⚙</span>
+                Settings
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="user-mini">
+
+                <div class="avatar">
+                    AA
+                </div>
+
+                <div>
+                    <strong>Adheel Ahamed</strong>
+                    <small>Investor</small>
+                </div>
+
+            </div>
+
+            <button class="logout-btn" onclick="logout()">
+                ↪
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main-content" id="dashboard">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <button class="menu-btn" onclick="toggleSidebar()">
+                ☰
+            </button>
+
+            <div class="page-title">
+
+                <span>INVESTOR DASHBOARD</span>
+
+                <h1>Good morning, Adheel 👋</h1>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <button class="icon-btn" onclick="showNotifications()">
+                    ♢
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="top-avatar">
+                    AA
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD -->
+
+        <section class="dashboard-content">
+
+
+            <!-- WELCOME CARD -->
+
+            <div class="welcome-card">
+
+                <div>
+
+                    <div class="status-badge">
+                        <span></span>
+                        PROFILE ACTIVE
+                    </div>
+
+                    <h2>
+                        Discover your next
+                        <span>opportunity.</span>
+                    </h2>
+
+                    <p>
+                        Explore promising companies and connect
+                        with founders looking for the right investors.
+                    </p>
+
+                    <button
+                        class="primary-btn"
+                        onclick="scrollToSection('discover')">
+
+                        Explore Opportunities
+                        <span>→</span>
+
+                    </button>
+
+                </div>
+
+                <div class="welcome-graphic">
+                    ↗
+                </div>
+
+            </div>
+
+
+            <!-- STAT CARDS -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+                        <span>Total Invested</span>
+                        <div class="stat-icon">₹</div>
+                    </div>
+
+                    <h3>₹4,25,000</h3>
+
+                    <p class="positive">
+                        +12.8%
+                        <span>this year</span>
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+                        <span>Portfolio Value</span>
+                        <div class="stat-icon">◈</div>
+                    </div>
+
+                    <h3>₹5,12,450</h3>
+
+                    <p class="positive">
+                        +20.5%
+                        <span>overall return</span>
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+                        <span>Active Investments</span>
+                        <div class="stat-icon">↗</div>
+                    </div>
+
+                    <h3>08</h3>
+
+                    <p class="muted">
+                        Across 6 sectors
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+                        <span>Pending Requests</span>
+                        <div class="stat-icon">✉</div>
+                    </div>
+
+                    <h3>03</h3>
+
+                    <p class="warning">
+                        Needs attention
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTENT GRID -->
+
+            <div class="content-grid">
+
+
+                <!-- OPPORTUNITIES -->
+
+                <section class="panel opportunities" id="discover">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                RECOMMENDED
+                            </span>
+
+                            <h2>Investment Opportunities</h2>
+
+                        </div>
+
+                        <button
+                            class="view-all"
+                            onclick="showAllCompanies()">
+
+                            View all →
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="company-list">
+
+
+                        <!-- COMPANY 1 -->
+
+                        <div class="company-card">
+
+                            <div class="company-logo logo-blue">
+                                F
+                            </div>
+
+                            <div class="company-info">
+
+                                <div class="company-title">
+
+                                    <h3>Finora</h3>
+
+                                    <span class="verified">
+                                        ✓ Verified
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    FinTech • Chennai
+                                </p>
+
+                                <div class="tags">
+
+                                    <span>FinTech</span>
+                                    <span>Series A</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="company-stats">
+
+                                <div>
+                                    <small>Seeking</small>
+                                    <strong>₹2.5 Cr</strong>
+                                </div>
+
+                                <div>
+                                    <small>Equity</small>
+                                    <strong>8%</strong>
+                                </div>
+
+                            </div>
+
+
+                            <button
+                                class="interest-btn"
+                                onclick="showInterest('Finora')">
+
+                                View
+
+                            </button>
+
+                            <button
+                                class="save-btn"
+                                onclick="saveCompany(this, 'Finora')">
+
+                                ♡
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- COMPANY 2 -->
+
+                        <div class="company-card">
+
+                            <div class="company-logo logo-purple">
+                                G
+                            </div>
+
+                            <div class="company-info">
+
+                                <div class="company-title">
+
+                                    <h3>GreenNest</h3>
+
+                                    <span class="verified">
+                                        ✓ Verified
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    CleanTech • Bengaluru
+                                </p>
+
+                                <div class="tags">
+
+                                    <span>CleanTech</span>
+                                    <span>Seed</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="company-stats">
+
+                                <div>
+                                    <small>Seeking</small>
+                                    <strong>₹1.2 Cr</strong>
+                                </div>
+
+                                <div>
+                                    <small>Equity</small>
+                                    <strong>12%</strong>
+                                </div>
+
+                            </div>
+
+
+                            <button
+                                class="interest-btn"
+                                onclick="showInterest('GreenNest')">
+
+                                View
+
+                            </button>
+
+                            <button
+                                class="save-btn"
+                                onclick="saveCompany(this, 'GreenNest')">
+
+                                ♡
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- COMPANY 3 -->
+
+                        <div class="company-card">
+
+                            <div class="company-logo logo-orange">
+                                M
+                            </div>
+
+                            <div class="company-info">
+
+                                <div class="company-title">
+
+                                    <h3>MedCore</h3>
+
+                                    <span class="verified">
+                                        ✓ Verified
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    HealthTech • Hyderabad
+                                </p>
+
+                                <div class="tags">
+
+                                    <span>HealthTech</span>
+                                    <span>Pre-Series A</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="company-stats">
+
+                                <div>
+                                    <small>Seeking</small>
+                                    <strong>₹3 Cr</strong>
+                                </div>
+
+                                <div>
+                                    <small>Equity</small>
+                                    <strong>10%</strong>
+                                </div>
+
+                            </div>
+
+
+                            <button
+                                class="interest-btn"
+                                onclick="showInterest('MedCore')">
+
+                                View
+
+                            </button>
+
+                            <button
+                                class="save-btn"
+                                onclick="saveCompany(this, 'MedCore')">
+
+                                ♡
+
+                            </button>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+                <!-- PORTFOLIO -->
+
+                <section class="panel portfolio" id="portfolio">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                PERFORMANCE
+                            </span>
+
+                            <h2>Portfolio</h2>
+
+                        </div>
+
+                        <button class="filter-btn">
+                            2026 ▾
+                        </button>
+
+                    </div>
+
+
+                    <div class="portfolio-value">
+
+                        <strong>₹5,12,450</strong>
+
+                        <span>
+                            +₹87,450
+                        </span>
+
+                    </div>
+
+
+                    <div class="chart">
+
+                        <div class="chart-line"></div>
+
+                        <div class="chart-point point-one"></div>
+                        <div class="chart-point point-two"></div>
+                        <div class="chart-point point-three"></div>
+                        <div class="chart-point point-four"></div>
+                        <div class="chart-point point-five"></div>
+
+                    </div>
+
+
+                    <div class="chart-labels">
+
+                        <span>Jan</span>
+                        <span>Mar</span>
+                        <span>May</span>
+                        <span>Jul</span>
+                        <span>Sep</span>
+                        <span>Nov</span>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- LOWER GRID -->
+
+            <div class="lower-grid">
+
+
+                <!-- RECENT REQUESTS -->
+
+                <section class="panel" id="requests">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                ACTIVITY
+                            </span>
+
+                            <h2>Recent Requests</h2>
+
+                        </div>
+
+                        <button class="view-all">
+                            View all →
+                        </button>
+
+                    </div>
+
+
+                    <div class="request-list">
+
+
+                        <div class="request">
+
+                            <div class="request-icon">
+                                F
+                            </div>
+
+                            <div class="request-info">
+
+                                <strong>Finora</strong>
+
+                                <span>
+                                    Investment interest sent
+                                </span>
+
+                            </div>
+
+                            <span class="pending">
+                                Pending
+                            </span>
+
+                        </div>
+
+
+                        <div class="request">
+
+                            <div class="request-icon purple">
+                                G
+                            </div>
+
+                            <div class="request-info">
+
+                                <strong>GreenNest</strong>
+
+                                <span>
+                                    Founder responded
+                                </span>
+
+                            </div>
+
+                            <span class="accepted">
+                                Accepted
+                            </span>
+
+                        </div>
+
+
+                        <div class="request">
+
+                            <div class="request-icon orange">
+                                M
+                            </div>
+
+                            <div class="request-info">
+
+                                <strong>MedCore</strong>
+
+                                <span>
+                                    Documents requested
+                                </span>
+
+                            </div>
+
+                            <span class="pending">
+                                Review
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+                <!-- PROFILE -->
+
+                <section class="panel profile-panel" id="profile">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                ACCOUNT
+                            </span>
+
+                            <h2>My Profile</h2>
+
+                        </div>
+
+                        <button
+                            class="edit-btn"
+                            onclick="editProfile()">
+
+                            Edit
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="profile-content">
+
+                        <div class="profile-avatar">
+                            AA
+                        </div>
+
+                        <div>
+
+                            <h3>Adheel Ahamed</h3>
+
+                            <p>
+                                Technology Investor
+                            </p>
+
+                            <div class="profile-tags">
+
+                                <span>FinTech</span>
+                                <span>Startups</span>
+                                <span>Technology</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-details">
+
+                        <div>
+                            <small>Investment Range</small>
+                            <strong>₹5L – ₹50L</strong>
+                        </div>
+
+                        <div>
+                            <small>Preferred Stage</small>
+                            <strong>Seed / Series A</strong>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- TOAST -->
+
+    <div class="toast" id="toast">
+
+        <span id="toastIcon">✓</span>
+
+        <span id="toastMessage">
+            Success
+        </span>
+
+    </div>
+
+
+    <script src="investor.js"></script>
+
+</body>
+</html>

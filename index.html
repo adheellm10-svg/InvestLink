@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InvestLink | Connect. Invest. Grow.</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Background Effects -->
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                <span class="logo-mark">I</span>
+                Invest<span>Link</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#opportunities">Opportunities</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#about">About</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="auth.html" class="login">Login</a>
+                <a href="auth.html" class="nav-register">Get Started <span>→</span></a>
+            </div>
+
+            <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+        </div>
+    </header>
+
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" onclick="closeMenu()">Home</a>
+        <a href="#opportunities" onclick="closeMenu()">Opportunities</a>
+        <a href="#how-it-works" onclick="closeMenu()">How It Works</a>
+        <a href="#about" onclick="closeMenu()">About</a>
+        <a href="#" onclick="closeMenu()">Login</a>
+    </div>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="status-badge">
+                <span class="pulse"></span>
+                Connecting the next generation of businesses
+            </div>
+
+            <h1>
+                Where
+                <span>Vision</span>
+                Meets
+                <span>Capital.</span>
+            </h1>
+
+            <p>
+                InvestLink brings ambitious founders and forward-thinking
+                investors together in one powerful platform.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#opportunities" class="main-button">
+                    Explore Opportunities
+                    <span>↗</span>
+                </a>
+
+                <a href="#how-it-works" class="outline-button">
+                    How it works
+                </a>
+
+            </div>
+
+            <div class="trusted">
+                <span class="trusted-line"></span>
+                Trusted by ambitious founders & investors
+            </div>
+
+        </div>
+
+
+        <!-- INVESTMENT CARD -->
+        <div class="investment-wrapper">
+
+            <div class="floating-tag tag-one">
+                <span>↗</span>
+                +24.8%
+            </div>
+
+            <div class="investment-card">
+
+                <div class="card-top">
+                    <div>
+                        <p class="card-label">FEATURED OPPORTUNITY</p>
+                        <h3>Nova Energy</h3>
+                    </div>
+
+                    <div class="verified">
+                        ✓ Verified
+                    </div>
+                </div>
+
+                <p class="industry">
+                    Clean Energy · Technology
+                </p>
+
+                <div class="chart-area">
+
+                    <div class="chart-label">
+                        <span>Funding Progress</span>
+                        <strong>72%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-value"></div>
+                    </div>
+
+                    <div class="chart-lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+
+                <div class="card-data">
+
+                    <div>
+                        <small>Target</small>
+                        <strong>₹25L</strong>
+                    </div>
+
+                    <div>
+                        <small>Raised</small>
+                        <strong>₹18L</strong>
+                    </div>
+
+                    <div>
+                        <small>Stage</small>
+                        <strong>Seed</strong>
+                    </div>
+
+                </div>
+
+                <button class="invest-button" onclick="viewOpportunity()">
+                    View Opportunity
+                    <span>→</span>
+                </button>
+
+            </div>
+
+            <div class="floating-tag tag-two">
+                <span>●</span>
+                128 Investors
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STATS -->
+    <section class="stats-section">
+
+        <div class="stat">
+            <strong>500+</strong>
+            <span>Investors</span>
+        </div>
+
+        <div class="stat">
+            <strong>250+</strong>
+            <span>Companies</span>
+        </div>
+
+        <div class="stat">
+            <strong>₹50Cr+</strong>
+            <span>Opportunities</span>
+        </div>
+
+        <div class="stat">
+            <strong>1,000+</strong>
+            <span>Connections</span>
+        </div>
+
+    </section>
+
+
+    <!-- OPPORTUNITIES -->
+    <section class="opportunities" id="opportunities">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="section-tag">DISCOVER</p>
+
+                <h2>
+                    Investment
+                    <span>Opportunities</span>
+                </h2>
+            </div>
+
+            <a href="#" class="view-all">
+                View all opportunities →
+            </a>
+
+        </div>
+
+
+        <div class="opportunity-grid">
+
+            <!-- CARD 1 -->
+            <div class="opportunity-card">
+
+                <div class="company-header">
+                    <div class="company-logo green">N</div>
+
+                    <div class="verified-small">
+                        ✓ Verified
+                    </div>
+                </div>
+
+                <h3>Nova Energy</h3>
+
+                <p>
+                    Renewable energy solutions for a sustainable future.
+                </p>
+
+                <div class="category">
+                    CleanTech
+                </div>
+
+                <div class="opportunity-details">
+
+                    <div>
+                        <small>Funding Needed</small>
+                        <strong>₹25 Lakhs</strong>
+                    </div>
+
+                    <div>
+                        <small>Stage</small>
+                        <strong>Seed</strong>
+                    </div>
+
+                </div>
+
+                <button onclick="showCompany('Nova Energy')">
+                    View Company
+                </button>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+            <div class="opportunity-card">
+
+                <div class="company-header">
+                    <div class="company-logo purple">T</div>
+
+                    <div class="verified-small">
+                        ✓ Verified
+                    </div>
+                </div>
+
+                <h3>TechOrbit</h3>
+
+                <p>
+                    AI-powered business automation for growing companies.
+                </p>
+
+                <div class="category">
+                    Artificial Intelligence
+                </div>
+
+                <div class="opportunity-details">
+
+                    <div>
+                        <small>Funding Needed</small>
+                        <strong>₹40 Lakhs</strong>
+                    </div>
+
+                    <div>
+                        <small>Stage</small>
+                        <strong>Growth</strong>
+                    </div>
+
+                </div>
+
+                <button onclick="showCompany('TechOrbit')">
+                    View Company
+                </button>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+            <div class="opportunity-card">
+
+                <div class="company-header">
+                    <div class="company-logo orange">Q</div>
+
+                    <div class="verified-small">
+                        ✓ Verified
+                    </div>
+                </div>
+
+                <h3>QuickCart</h3>
+
+                <p>
+                    Next-generation local commerce and delivery platform.
+                </p>
+
+                <div class="category">
+                    E-Commerce
+                </div>
+
+                <div class="opportunity-details">
+
+                    <div>
+                        <small>Funding Needed</small>
+                        <strong>₹15 Lakhs</strong>
+                    </div>
+
+                    <div>
+                        <small>Stage</small>
+                        <strong>Startup</strong>
+                    </div>
+
+                </div>
+
+                <button onclick="showCompany('QuickCart')">
+                    View Company
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section class="how-section" id="how-it-works">
+
+        <div class="section-center">
+
+            <p class="section-tag">HOW IT WORKS</p>
+
+            <h2>
+                One platform.
+                <span>Two possibilities.</span>
+            </h2>
+
+            <p>
+                Whether you're building the next big company or looking
+                for your next opportunity, InvestLink makes the connection simple.
+            </p>
+
+        </div>
+
+
+        <div class="role-grid">
+
+            <!-- INVESTOR -->
+            <div class="role-card">
+
+                <div class="role-number">01</div>
+
+                <div class="role-icon">↗</div>
+
+                <h3>For Investors</h3>
+
+                <p>
+                    Discover promising businesses and connect with
+                    founders based on your investment interests.
+                </p>
+
+                <ul>
+                    <li>✓ Discover verified companies</li>
+                    <li>✓ Filter opportunities</li>
+                    <li>✓ Send interest requests</li>
+                    <li>✓ Track connections</li>
+                </ul>
+
+                <a href="#">
+                    Start Exploring →
+                </a>
+
+            </div>
+
+
+            <!-- FOUNDER -->
+            <div class="role-card founder-card">
+
+                <div class="role-number">02</div>
+
+                <div class="role-icon">✦</div>
+
+                <h3>For Founders</h3>
+
+                <p>
+                    Showcase your business idea and connect with
+                    investors who believe in your vision.
+                </p>
+
+                <ul>
+                    <li>✓ Create company profile</li>
+                    <li>✓ Showcase your idea</li>
+                    <li>✓ Set funding requirements</li>
+                    <li>✓ Connect with investors</li>
+                </ul>
+
+                <a href="#">
+                    Create Your Profile →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+
+        <div class="about-visual">
+
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+
+            <div class="center-logo">
+                I
+            </div>
+
+            <div class="orbit-node node-one">₹</div>
+            <div class="orbit-node node-two">↗</div>
+            <div class="orbit-node node-three">✦</div>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <p class="section-tag">WHY INVESTLINK</p>
+
+            <h2>
+                Turning connections
+                into <span>possibilities.</span>
+            </h2>
+
+            <p>
+                Finding the right investor or the right business opportunity
+                shouldn't be complicated.
+            </p>
+
+            <p>
+                InvestLink creates a simple digital environment where
+                founders can showcase their vision and investors can
+                discover opportunities that match their interests.
+            </p>
+
+            <div class="about-points">
+
+                <div>
+                    <span>01</span>
+                    <strong>Discover</strong>
+                    <p>Find opportunities that match your interests.</p>
+                </div>
+
+                <div>
+                    <span>02</span>
+                    <strong>Connect</strong>
+                    <p>Send interest requests and start conversations.</p>
+                </div>
+
+                <div>
+                    <span>03</span>
+                    <strong>Grow</strong>
+                    <p>Build meaningful business connections.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta-section">
+
+        <div>
+
+            <p class="section-tag">YOUR NEXT MOVE</p>
+
+            <h2>
+                Your idea deserves
+                the right <span>connection.</span>
+            </h2>
+
+            <p>
+                Join InvestLink and discover what is possible.
+            </p>
+
+        </div>
+
+        <div class="cta-buttons">
+
+            <a href="#" class="main-button">
+                Join InvestLink →
+            </a>
+
+            <a href="#" class="outline-button">
+                Explore Companies
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+                    <span class="logo-mark">I</span>
+                    Invest<span>Link</span>
+                </a>
+
+                <p>
+                    Connecting ambitious founders with
+                    forward-thinking investors.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Platform</h4>
+
+                <a href="#opportunities">Opportunities</a>
+                <a href="#">Investors</a>
+                <a href="#">Founders</a>
+                <a href="#">Dashboard</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Company</h4>
+
+                <a href="#about">About</a>
+                <a href="#">How It Works</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Connect</h4>
+
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="mailto:support@investlink.com">
+                    support@investlink.com
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 InvestLink. All rights reserved.
+            </span>
+
+            <span>
+                Built for founders & investors.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
